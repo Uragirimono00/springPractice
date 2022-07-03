@@ -10,4 +10,5 @@ class SpringPracticeApplicationTests {
     void contextLoads() {
     }
 
+
 }
