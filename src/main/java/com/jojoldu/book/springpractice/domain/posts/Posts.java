@@ -1,5 +1,9 @@
 package com.jojoldu.book.springpractice.domain.posts;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,16 +22,14 @@ public class Posts {
     private String title;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String author;
-
     private String content;
 
+    private String author;
+
     @Builder
-    public Posts(String title, String author, String content){
+    public Posts(String title, String content, String author) {
         this.title = title;
-        this.author = author;
         this.content = content;
+        this.author = author;
     }
-
-
 }
