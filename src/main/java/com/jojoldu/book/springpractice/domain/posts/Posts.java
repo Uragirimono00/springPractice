@@ -1,9 +1,6 @@
 package com.jojoldu.book.springpractice.domain.posts;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
+import com.jojoldu.book.springpractice.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
@@ -25,6 +22,11 @@ public class Posts {
     private String content;
 
     private String author;
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
 
     @Builder
     public Posts(String title, String content, String author) {
